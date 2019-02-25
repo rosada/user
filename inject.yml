@@ -1,1 +1,7 @@
-
+---
+- hosts: all
+  tasks:
+  - name: put pubkey
+    lineinfile:
+      path: "/home/{{ username }}/.ssh/authorized_keys"
+      line: "{{ pubkey }}"
